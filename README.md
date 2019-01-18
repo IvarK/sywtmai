@@ -1,4 +1,4 @@
-# sywtmai
+# So you want to make an incremental
 
 Here you will see the tutorial project for code reference. 
 Each video will go on its own folder, and you can access the game at https://ivark.github.io/sywtmai/folderName,

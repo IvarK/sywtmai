@@ -1,0 +1,32 @@
+
+* {
+  box-sizing: border-box;
+}
+
+.generator {
+  border: 2px solid khaki;
+  background-color: beige;
+  text-align: center;
+  width: 300px;
+  padding: 15px;
+  font-size: 1.3em;
+  cursor: pointer;
+  user-select: none;
+}
+
+.generator.locked {
+  background-color: rgb(212, 90, 90)
+}
+
+.generators-container {
+  display: flex;
+  width: 600px;
+  flex-wrap: wrap;
+  margin: auto;
+}
+
+#currency {
+  margin: 40px;
+  font-size: 3em;
+  text-align: center;
+}

@@ -1,0 +1,59 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="css/styles.css">
+  <title>Mobile Money</title>
+</head>
+<body>
+  <div id="app">
+    <div class="currency-container">
+      <div class="marketing-currency">
+        You have ${{ format(player.money) }}
+      </div>
+      <div class="artist-currency">
+
+      </div>
+      <div class="lootboxTeam-currency">
+
+      </div>
+    </div>
+    <div class="producers-container">
+      <div class="generators-container">
+        <div class="generator marketing-generator" v-for="(marketing, idx) in player.marketing">
+          <h4>{{ marketing.name }}</h4>
+          <span class="generator-amount">{{ format(marketing.amount) }}</span>
+          <span class="generator-multiplier">x{{ format(marketing.mult) }}</span>
+          <span class="generator-cost">Cost: {{ format(marketing.cost) }}</span>
+          <button @click="buyMarketingGenerator(idx)">Buy 1</button>
+        </div>
+      </div>
+      <div class="generators-container">
+        <div class="generator artist-generator" v-for="(artist, idx) in player.artists">
+          <h4>{{ artist.name }}</h4>
+          <span class="generator-amount">{{ format(artist.amount) }}</span>
+          <span class="generator-multiplier">x{{ format(artist.mult) }}</span>
+          <span class="generator-cost">Cost: {{ format(artist.cost) }}</span>
+          <button @click="buyArtistGenerator(idx)">Buy 1</button>
+        </div>
+      </div>
+      <div class="generators-container">
+        <div class="generator lootboxTeam-generator" v-for="(lootboxTeam, idx) in player.lootboxTeam">
+          <h4>{{ lootboxTeam.name }}</h4>
+          <span class="generator-amount">{{ format(lootboxTeam.amount) }}</span>
+          <span class="generator-multiplier">x{{ format(lootboxTeam.mult) }}</span>
+          <span class="generator-cost">Cost: {{ format(lootboxTeam.cost) }}</span>
+          <button @click="buyLootboxTeamGenerator(idx)">Buy 1</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+<script src="js/vue.js"></script>
+<script src="js/player.js"></script>
+<script src="js/format.js"></script>
+<script src="js/loop.js"></script>
+<script src="js/format.js"></script>
+<script src="js/index.js"></script>
+</html>

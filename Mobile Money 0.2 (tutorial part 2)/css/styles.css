@@ -1,0 +1,38 @@
+
+* {
+  box-sizing: border-box;
+}
+
+#app {
+  width: 950px;
+  margin: auto;
+}
+
+.currency-container, .producers-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.marketing-currency, .artist-currency, .lootboxTeam-currency {
+  width: 300px;
+  border: 1px solid black;
+  text-align: center;
+  padding: 40px;
+}
+
+.generators-container {
+  display: flex;
+  flex-direction: column;
+  margin-top: 40px;
+}
+
+.generator {
+  border: 1px solid black;
+  width: 300px;
+  height: 120px;
+  text-align: center;
+}
+
+.generator-cost {
+  display: block;
+}
